@@ -54,19 +54,19 @@ As features do aplicativo são:
 
 ### 1 - Quando você abrir o App, Você vera a tela principal
 
-![Homepage image](https://github.com/rasta-slaine/Chat_IA_React/public/Readmi/image1.png)
+![Homepage image](https://raw.githubusercontent.com/rasta-slaine/Chat_IA_React/main/public/Readmi/image1.png)
 
 ### 2 - Carregamento - a resposta e caregando com o skelleton 
 
-![Loading](https://github.com/rasta-slaine/Chat_IA_React/public/Readmi/image2.png)
+![Loading](https://raw.githubusercontent.com/rasta-slaine/Chat_IA_React/main/public/Readmi/image2.png)
 
 ### 3 - E após o loading, Você vera a sua resposta.
 
-![Quest](https://github.com/rasta-slaine/Chat_IA_React/public/Readmi/image3.png)
+![Quest](https://raw.githubusercontent.com/rasta-slaine/Chat_IA_React/main/public/Readmi/image3.png)
 
 ### 4 - Os Titulo dinamico - pergunta
 
-![Title](https://github.com/rasta-slaine/Chat_IA_React/public/Readmi/image4.png)
+![Title](https://raw.githubusercontent.com/rasta-slaine/Chat_IA_React/main/public/Readmi/image4.png)
 
 
 
