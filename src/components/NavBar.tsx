@@ -1,6 +1,6 @@
 
  
-import { BrowserRouter as Router, Link,useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Link} from 'react-router-dom';
 
 
 const NavBar = ( )=>{

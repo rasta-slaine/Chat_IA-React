@@ -1,9 +1,9 @@
 
 import { Separator } from "@/components/ui/separator"
 
-type Props = {}
 
-const Footer = (props: Props) => {
+
+const Footer = () => {
   return (
     <div >
       <Separator  className='mt-8'/>
