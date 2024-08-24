@@ -15,7 +15,7 @@ dist-ssr
 # Ignorar arquivo de variáveis de ambiente
 .env
 # Ignorar um arquivo TypeScript específico
-exemplo.ts
+src/services/apicopy.ts
 
 # Editor directories and files
 .vscode/*

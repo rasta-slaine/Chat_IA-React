@@ -1,5 +1,5 @@
 
-## SpotCode
+## Chat App IA
 Essa aplicação é um Chat IA App que permite aos usuários interagirem com a IA do Google Gemini para tirar dúvidas e fazer perguntas. A interface é projetada para ser dinâmica e interativa, proporcionando uma experiência de usuário agradável e eficiente.
 
 ## Technology 
