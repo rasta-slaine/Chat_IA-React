@@ -1,6 +1,8 @@
 
 import { useAnswerGemini } from '@/services/queries';
 import { Skeleton } from "@/components/ui/skeleton"
+//import TextGeneration from '@/services/api';
+
 
 
 
@@ -14,7 +16,8 @@ type ChatAswerProps = {
 
 const ChatAswer = ({SetResults}: ChatAswerProps) => {
  
-const {data,isError,isLoading} = useAnswerGemini({SetResults})
+ const {data,isError,isLoading} = useAnswerGemini({SetResults})
+//const text = TextGeneration(SetResults)
 
 if(isLoading){
   return (
@@ -55,7 +58,7 @@ function PreFormattedTextComponent( message : string) {
   return (
     <div className='whitespace-pre-wrap overflow-y-auto h-60'>
        {
-        PreFormattedTextComponent(data)
+        PreFormattedTextComponent(String(data))
        }
     </div>
   )

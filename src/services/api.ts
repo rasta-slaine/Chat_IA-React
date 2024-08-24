@@ -1,31 +1,25 @@
-import axios  from "axios";
 
-const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyDUJPrKdHo-p8zsPEiQmd7E8mbaXstkZgo'
+const API_KEY = import.meta.env.VITE_API_KEY;
+
+import {GoogleGenerativeAI} from "@google/generative-ai"
+
+// Inicializa o modelo usando a chave de API do ambiente
+const model = new GoogleGenerativeAI(API_KEY).getGenerativeModel({
+      model: 'gemini-1.5-flash',
+    });
 
 
-//  define o tipo das props que o componente ChatAswer rec.
-type ChatAnswerProps = {
-    SetResults : string 
-  }
+const TextGeneration = async (prompt:string):Promise<string> =>{
+try {
 
-export const getAnswerGemini = async ({SetResults}: ChatAnswerProps)=>{
-  
-        const response = await axios({
-            url: API_URL,
-            method:'post',
-            headers:{},
-            data:{
-                contents: [{ parts: [{ text: SetResults }] }],
-            }
-        })
-    
-        if(response.data && response.data.candidates.length > 0){
-           const answer =  response.data.candidates[0].content.parts[0].text
-           console.log(answer)
-           return answer
-        }
+    console.log('Enviando requisição para gerar conteúdo...');
+    const result = await model.generateContent(prompt);
+    return result.response.text();
 
-    return null  // Return null or an appropriate fallback value if no data is found
+} catch (error) {
+    console.error('Falha ao fazer a chamada à API:', error);
+    throw error;
+}
+}
 
-    
- }
+export default TextGeneration

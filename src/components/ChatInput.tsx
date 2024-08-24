@@ -15,9 +15,12 @@ type ChatInputProps = {
 const ChatInput = ({SetResults,SetQuestionTitle}: ChatInputProps) => {
 
  const[question,SetQuestion] = useState('')
+ const[inputText,SetInputText] = useState('')
 
   function HandleChange(text: string ){
     SetQuestion(text)
+    SetInputText(text)
+
   }
 
   function UpperCase(text: string){
@@ -27,6 +30,7 @@ const ChatInput = ({SetResults,SetQuestionTitle}: ChatInputProps) => {
   function SendChange(){
     SetResults(question)
     SetQuestionTitle(UpperCase(question))
+    SetInputText("")
   }
 
 
@@ -37,7 +41,7 @@ return (
         className='w-3/6'
         placeholder='Escreva uma pergunta...'
         onChange={(e)=>{HandleChange(e.target.value)}}
-        
+        value={inputText}
         />
         <Button className='w-1/6 ml-3'
         onClick={SendChange}

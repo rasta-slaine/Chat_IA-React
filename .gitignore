@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Ignorar arquivo de variáveis de ambiente
+.env
+# Ignorar um arquivo TypeScript específico
+exemplo.ts
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
